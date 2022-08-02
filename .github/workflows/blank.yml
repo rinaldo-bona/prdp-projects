@@ -116,7 +116,7 @@ jobs:
         mvn --file check-in-papi-app/pom.xml deploy -DmuleDeploy \ 
         -Dap.clientid=${{ secrets.AP_CLIENTID }} \
         -Dap.clientsecret=${{ secrets.AP_CLIENTSECRET }} \
-        -DapplicationName="checkin-api-ribo95-m" \
+        -DapplicationName="checkin-cicd-ribo95-m" \
         -Denvironment="dev" \
         -Dapi.id="18030101" \
         -Dencrypt.key=${{ secrets.ENCRYPT_KEY }}
