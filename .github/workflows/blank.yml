@@ -114,10 +114,10 @@ jobs:
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn --file check-in-papi-app/pom.xml deploy -DmuleDeploy \ 
-        -Dap.clientid=${{ secrets.AP_CLIENTID }} \
-        -Dap.clientsecret=${{ secrets.AP_CLIENTSECRET }} \
+        -Dap.clientid="${{ secrets.AP_CLIENTID }}" \
+        -Dap.clientsecret="${{ secrets.AP_CLIENTSECRET }}" \
         -DapplicationName="checkin-cicd-ribo95-m" \
         -Denvironment="dev" \
         -Dapi.id="18030101" \
-        -Dencrypt.key=${{ secrets.ENCRYPT_KEY }}
+        -Dencrypt.key="${{ secrets.ENCRYPT_KEY }}"
   
